@@ -284,7 +284,7 @@ One of these measures is called positive communications, which means clear and p
 
 For example, a 50m safety distance around a heavy vehicle is assumed to ensure safety. When another vehicle approaches the 50m safety distance of the heavy vehicle, it needs to initiate a positive communication such as "40 loader, this is 539 dump truck. Permission to pass your left." and wait for the response for the heavy vehicle. After receiving the request, the heavy vehicle is expected to reply in a clear and repeated way such as "539 dump truck. You are clear to pass 40 loader on the left."    
 
-![Positive communication illustration](./documentation/images/positive_communication.png)
+![Positive communication illustration](./documentation/images/positive_communication.PNG)
 
 ## Automated transcribing and compliance classification
 
