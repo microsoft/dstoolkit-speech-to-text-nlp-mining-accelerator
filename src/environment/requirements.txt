@@ -1,0 +1,19 @@
+python-dotenv
+azure-cognitiveservices-speech
+azureml-sdk[notebooks,contrib] 
+jiwer
+nltk
+gensim
+SoundFile
+auto-sklearn
+scipy==1.7.0
+
+## note to intsall pyldavis perform the following
+## pip uninstall enum34
+pyldavis
+enum34
+noisereduce
+pydub
+moviepy
+mgrs
+azure-storage-file-datalake

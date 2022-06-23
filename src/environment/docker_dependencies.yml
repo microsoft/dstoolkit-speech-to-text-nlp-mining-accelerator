@@ -1,0 +1,8 @@
+#name: test-custom_docker
+FROM mcr.microsoft.com/azureml/openmpi3.1.2-ubuntu18.04:20210806.v1
+
+#Run commands required to register library
+RUN apt-get update 
+RUN apt-get install libsndfile1 -y
+
+#Install any packages needed

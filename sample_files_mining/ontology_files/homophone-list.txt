@@ -1,0 +1,8 @@
+[('is there', 'zero'), 
+('stock', 'stop'),
+('full', 'four'),
+('stick', 'six'),
+('project', 'approaching'),
+('through', 'two'),
+('jerry', 'zero'),
+('speaker', 'three two'),]

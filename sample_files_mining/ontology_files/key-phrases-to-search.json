@@ -1,0 +1,8 @@
+{   
+	"vehicle_phrases" : ["loader", "dump truck", "excavator", "grader", "crane"],
+
+	"movement_phrases" : ["pass", "halted", "moving", "approaching", "turn", "stopped"]
+
+}
+
+

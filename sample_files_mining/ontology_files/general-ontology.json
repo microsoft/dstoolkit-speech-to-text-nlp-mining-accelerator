@@ -1,0 +1,6 @@
+{   
+    "general" : ["Say again", "understand", "permission", "clear"],
+
+	"orientation" : ["left", "right", "front", "behind"]
+	
+}
