@@ -3,7 +3,7 @@
 # Speech-to-Text Transcription and Classification Solution Accelerator
 This repository contains the base repository for developing an end-to-end speech transcription and message classification solution for any type of business problem requiring an advanced method for classifying audio messages into actionable meaning. The types of business problem benefitting from this solution include:
 - General audio message classification within a noisy environment 
-- Monitoring communications for safety and regulatory purposes, eg: Mining industry - positive communicatios
+- Monitoring communications for safety and regulatory purposes, eg: Mining industry - positive communications
 - Complex audio message and communication classification scenarios, eg: Message understanding   
 
 Note that to illustrate the specific use case of positive communication in mining industry, some customized samples files [sample_files_mining](./sample_files_mining) are aslo provided in this repo. This use case will be elabrated in [An example use case in Mining Industry](#an-example-use-case-in-mining-industry).
