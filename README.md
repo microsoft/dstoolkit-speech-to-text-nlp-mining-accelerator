@@ -302,7 +302,7 @@ some customized samples files [sample_files_mining](./sample_files_mining) are p
 ### Aggregated csv file `transcription-truth.csv`
     It includes the following columns:
 
-- `audio file name`: Names of sample audio files. In this example, the audio file is named by the following format: <No. of conversation>-<start_date: YYMMDD>-<start_time: HHMMSS>-<start_date: YYMMDD>-<start_time: HHMMSS>. 
+- `audio file name`: Names of sample audio files. In this example, the audio file is named by the following format: <No. of conversation>-<start_date: YYMMDD>-<start_time: HHMMSS>-<end_date: YYMMDD>-<end_time: HHMMSS>. 
 - `true transcription`: True transcription for each audio file, which will be used in measuring the accuracy of Speech-to-Text.
 - `Labels for each sample audio file`: Ground-truth of the classifier
     - Y: It is a positive communication and it IS compliant.
