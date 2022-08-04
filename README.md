@@ -14,7 +14,6 @@ The diagram below presents the main data flow overview:
 
 ![High Level Overview](documentation/images/solution-overview.png)
 
-
 # Main features
 
 Provided audio files and their supporting attributes, this repository include three main features: 
@@ -45,7 +44,7 @@ The digarm below shows a sample audio signal processing using the above mensione
 ## Speech to text transcription Machine Learning Modelling
 The first stage of the solution is to apply a combination of Azure Cognitive services for Speech and customised scripts to convert the array of the battle audio files into lexical text
 
-The output format for speech-to-text JSON (saved as **transcripted_dict.json**) is presented below:
+The output format for speech-to-text JSON (saved as `transcripted_dict.json`) is presented below:
 
 ```yaml
 {
@@ -82,10 +81,10 @@ The output format for speech-to-text JSON (saved as **transcripted_dict.json**) 
 ```
 
 where:
-- `id` key represents the audio file (filtered)
-- `text` key represents the basic (lexical) transcribed radio communication
-- `word_count` key represents the number of words detected
-- `confidence` key represent sthe confidence level for the transcription
+- `id`: represents the audio file (filtered)
+- `text`: represents the basic (lexical) transcribed radio communication
+- `word_count`: represents the number of words detected
+- `confidence`: represent sthe confidence level for the transcription
 
 
 ## Natural Language Processing (NLP) Machine Learning Modelling
