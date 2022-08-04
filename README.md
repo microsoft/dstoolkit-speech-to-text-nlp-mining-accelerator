@@ -378,7 +378,6 @@ For more details or help deploying, contact the following:
 * [Ben Plummer](benplummer@microsoft.com), Microsoft
 * [Kyoichi Iwasaki](kyiwasak@microsoft.com), Microsoft
 * [Zachary Hou](zacharyhou@microsoft.com), Microsoft
-* [Aditya Swaminathan](aditya.swaminathan@microsoft.com), Microsoft
 
 
 # Acknowledgements
