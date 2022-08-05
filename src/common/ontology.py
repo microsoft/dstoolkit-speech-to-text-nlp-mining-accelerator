@@ -1,6 +1,5 @@
 # This Python script i sused to specify the various communication protocols
-# used in C3PO including 'radio check' and 'CASEVAC' 
-# setup the current paths
+# including 'radio check' and 'CASEVAC'. setup the current paths
 import os, sys
 currentDir = os.path.dirname(os.getcwd())
 sys.path.append(currentDir)
@@ -12,7 +11,7 @@ from itertools import product
 
 class Ontology():
     """
-    This class focuses on the creating the ontology and the corpus for battle command
+    This class focuses on the creating the ontology and the corpus for command
     specific dictionary and key phrases
     """
     

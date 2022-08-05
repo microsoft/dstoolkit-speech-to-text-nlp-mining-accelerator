@@ -42,7 +42,7 @@ The digarm below shows a sample audio signal processing using the above mensione
 
 
 ## Speech to text transcription Machine Learning Modelling
-The first stage of the solution is to apply a combination of Azure Cognitive services for Speech and customised scripts to convert the array of the battle audio files into lexical text
+The first stage of the solution is to apply a combination of Azure Cognitive services for Speech and customised scripts to convert the array of the audio files into lexical text
 
 The output format for speech-to-text JSON (saved as `transcripted_dict.json`) is presented below:
 

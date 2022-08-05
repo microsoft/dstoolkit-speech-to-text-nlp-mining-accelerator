@@ -26,7 +26,7 @@ print('Loading environmental variables', load_dotenv(find_dotenv(ENVIORNMENT_FIL
 
 class AzureCognitiveSpeechServices():
     """
-    This class focuses on the Azure cognitive services for translating battle commands to lixical text
+    This class focuses on the Azure cognitive services for translating commands to lixical text
     and perform furthe NLP processing and ML analysis
     """
     def __init__(self, speech_key, location, validate, filtered):
