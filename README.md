@@ -29,7 +29,7 @@ These features enable you to have extract major insights.
 The audio signal processing and filtering techniques is developed to maximise the signal-to-noise ratio (SNR) of the audio signals for optimised speech-to-text processing. The key steps in the audio signal processing includes:
 1. Audio data processing and mono channel averaging
 2. Frequency domain and spectral analysis
-3. Signal (S) and noise (N) power analysis
+3. Signal (`S`) and noise (`N`) power analysis
 4. SNR optimisation
 5. Fast-Fourier-Transform (FFT) and Butterworth filter application
 
@@ -89,7 +89,7 @@ where:
 
 ## Natural Language Processing (NLP) Machine Learning Modelling
 The next stage uses NLP and related algorithms is the tokenisation of the lexical text and extraction of the key phrases. 
-The output format for the NLP JSON (saved as **NLP_dict.json**) is presented below.
+The output format for the NLP JSON (saved as `NLP_dict.json`) is presented below.
 (NB: Major attributes in `transcripted_dict.json` are also included in `NLP_dict.json`)
 
 ```yaml
@@ -206,9 +206,9 @@ $WA_{cc}(transcript_{n}) = 1 - WER(transcript_{n})$
 </font>
 
 *where*
-* `Insertion (*I*)`: Transcribed Words that are incorrectly added in the hypothesis transcript
-* `Deletion (*D*)`: Transcribed Words that are undetected in the hypothesis transcript
-* `Substitution (*S*)`: Trabscribed Words that were substituted between reference and hypothesis
+* `Insertion` (*I*): Transcribed Words that are incorrectly added in the hypothesis transcript
+* `Deletion` (*D*): Transcribed Words that are undetected in the hypothesis transcript
+* `Substitution` (*S*): Trabscribed Words that were substituted between reference and hypothesis
 
 
 # Getting Started
@@ -315,7 +315,6 @@ some customized samples files [sample_files_mining](./sample_files_mining) are p
     ```yaml
     {   
         "general" : ["Say again", "understand", "permission", "clear"],
-
         "orientation" : ["left", "right", "front", "behind"]
     }
     ```
@@ -342,7 +341,6 @@ some customized samples files [sample_files_mining](./sample_files_mining) are p
     ```yaml
     {   
         "vehicle_phrases" : ["loader", "dump truck", "excavator", "grader", "crane"],
-
         "movement_phrases" : ["pass", "halted", "moving", "approaching", "turn", "stopped"]
     }
     ```
