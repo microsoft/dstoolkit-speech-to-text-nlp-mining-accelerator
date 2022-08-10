@@ -23,7 +23,7 @@ PIP_PACKAGES = ['azureml-sdk', 'azure-cognitiveservices-speech', 'azureml-datase
 #--------------------------------------------------------------------------
 
 # 2.1 AML compute
-COMPUTE_NAME = 'ml-kyiwasak-compute'
+COMPUTE_NAME = 'ml-kyiwasak-compute2'
 COMPUTE_TYPE = 'AML_COMPUTE_INSTANCE'
 COMPUTE_CONFIG = 'STANDARD_D8_V3'
 COMPUTE_PRIORITY = 'lowpriority'

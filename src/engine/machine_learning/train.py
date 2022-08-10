@@ -9,6 +9,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix, accuracy_score, precision_score, recall_score
 
+from azureml.core.authentication import MsiAuthentication
 from azureml.core import Run
 from azureml.core.model import Model
 
@@ -100,8 +101,6 @@ parser.add_argument('--tenant_id', type=str, dest='tenant_id', default='tenant_i
 parser.add_argument('--subscription_id', type=str, dest='subscription_id', default='Subscription', help='Subscription ID')
 parser.add_argument('--resource_group', type=str, dest='resource_group', default='resource_group', help='Resource group')
 parser.add_argument('--location', type=str, dest='location', default='us', help='location')
-parser.add_argument('--sp_id', type=str, dest='sp_id', default='id', help='Service Principal ID')
-parser.add_argument('--sp_password', type=str, dest='sp_password', default='secret', help='Secret of Service Principal')
 parser.add_argument('--datastore', type=str, dest='datastore', default='datastore', help='datastore associated to Azure ML')
 parser.add_argument('--container_name', type=str, dest='container', default='container', help='Container in datastore')
 args = parser.parse_args()
@@ -115,8 +114,6 @@ tenant_id = args.tenant_id
 subscription_id = args.subscription_id
 resource_group = args.resource_group
 location = args.location
-sp_id = args.sp_id
-sp_password = args.sp_password
 datastore_name = args.datastore
 container_name = args.container
 
@@ -131,13 +128,14 @@ ml_dataframe_all = pd.read_csv(ml_dataframe_file, encoding = 'unicode_escape', e
 
 # Configure Azure ML workspace
 #-------------------
+## Authentication with managed identity
+msi_auth = MsiAuthentication()
 azuremlConfig = AzureMLConfiguration(workspace=workspace
                                     ,tenant_id=tenant_id
                                     ,subscription_id=subscription_id
                                     ,resource_group=resource_group
                                     ,location=location
-                                    ,sp_id=sp_id
-                                    ,sp_password=sp_password)
+                                    ,auth=msi_auth)
 
 ## Azure ML Workspace
 ws = azuremlConfig.configWorkspace()

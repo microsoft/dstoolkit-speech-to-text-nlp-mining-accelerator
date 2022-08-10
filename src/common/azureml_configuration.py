@@ -48,6 +48,7 @@ load_dotenv(find_dotenv('./environment/.env'))
 # also get storage account and key
 STORAGE_ACCOUNT = os.environ.get('STORAGE_ACCOUNT')
 SECRET_KEY = os.environ.get('SECRET_KEY')
+MANAGED_ID = os.environ.get('MANAGED_ID')
 
 class AzureMLConfiguration():
     """ 
@@ -61,8 +62,9 @@ class AzureMLConfiguration():
             subscription_id, 
             resource_group, 
             location, 
-            sp_id, 
-            sp_password
+#            sp_id, 
+#            sp_password
+            auth
         ):
         super().__init__() # inherit if applicable
 
@@ -71,8 +73,9 @@ class AzureMLConfiguration():
         self.subscription_id = subscription_id
         self.resource_group = resource_group
         self.location = location
-        self.sp_id = sp_id
-        self.sp_password = sp_password
+#        self.sp_id = sp_id
+#        self.sp_password = sp_password
+        self.auth = auth
         
         # workspace and other features will be assigned once configured
         self.ws = None  
@@ -101,13 +104,11 @@ class AzureMLConfiguration():
         # how-to-use-azureml/manage-azureml-service/authentication-in-azureml/authentication-in-azureml.ipynb
         try:
             # since it exists obtain details
-            sp = ServicePrincipalAuthentication(tenant_id=self.tenant_id,
-                                    service_principal_id=self.sp_id,
-                                    service_principal_password=self.sp_password)
+            # We have 2 options for authentication: CLI-authentication and managed ID with the same codes as follows:
             self.ws = Workspace.get(name=self.workspace_name, 
                                     subscription_id=self.subscription_id, 
                                     resource_group=self.resource_group,
-                                    auth = sp)
+                                    auth = self.auth)
 
             # print the workspace information
             print(f'workspace name:\t{self.ws.name}')
@@ -133,7 +134,8 @@ class AzureMLConfiguration():
                 config = AmlCompute.provisioning_configuration(vm_size=COMPUTE_CONFIG,
                                                             vm_priority=COMPUTE_PRIORITY, 
                                                             min_nodes=COMPUTE_MIN_NODE, 
-                                                            max_nodes=COMPUTE_MAX_NODE)
+                                                            max_nodes=COMPUTE_MAX_NODE,
+                                                            identity_type=MANAGED_ID,)
 
                 self.compute_target = ComputeTarget.create(workspace=self.ws, name=COMPUTE_NAME, provisioning_configuration=config)
                 self.compute_target.wait_for_completion(show_output=True, min_node_count=None, timeout_in_minutes=20)
@@ -313,7 +315,7 @@ class AzureMLConfiguration():
         try:
             # TODO: generate subdirectory `file_path` in container of blob storage, if needed
 
-            # the voice dataset register - based on number of files
+            # the battle voice dataset register - based on number of files
             datsets_registered = None
 
             # get all the audio files in datastore
