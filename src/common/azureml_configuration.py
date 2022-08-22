@@ -315,7 +315,7 @@ class AzureMLConfiguration():
         try:
             # TODO: generate subdirectory `file_path` in container of blob storage, if needed
 
-            # the battle voice dataset register - based on number of files
+            # the voice dataset register - based on number of files
             datsets_registered = None
 
             # get all the audio files in datastore
