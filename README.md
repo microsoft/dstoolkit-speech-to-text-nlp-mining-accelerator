@@ -199,10 +199,9 @@ where:
 ## Speech to text transcription performance claculation methodology
 The transcripted voide data into text will be evlauted against the actual text using industry standard [Word Error Rate](https://en.wikipedia.org/wiki/Word_error_rate). For reporting we will use the accuarcy rate as shown below
 
-<font size=5> $WER(transcript_{n}) = \frac{I + D + S}{N}$ * 100%
-
-$WA_{cc}(transcript_{n}) = 1 - WER(transcript_{n})$
-
+<font size=5>
+$$WER(transcript_{n}) = \frac{I + D + S}{N} * 100%$$
+$$WA_{cc}(transcript_{n}) = 1 - WER(transcript_{n})$$
 </font>
 
 *where*
