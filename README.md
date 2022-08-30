@@ -16,7 +16,7 @@ The diagram below presents the main data flow overview:
 
 # Main features
 
-Provided audio files and their supporting attributes, this repository include three main features: 
+Provided audio files and their supporting attributes, this repository includes the following main features: 
 - `Audio Signal Processing`
 - `Speech to text transcription Machine Learning Modelling` 
 - `Natural Language Processing (NLP) Machine Learning Modelling` 
