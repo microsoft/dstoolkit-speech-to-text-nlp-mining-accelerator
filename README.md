@@ -352,9 +352,9 @@ If you would like to try this use case, please follow the instruction in `0.6 Up
     ├── Speech2Text_NLP             # The main package, including the experiemntation and Azure ML pipelines
     │   ├── documentation           # Additional documentation descrining the system and any images used
     |   |── sample_files_mining     # Sample files for mining use case
-    |   |      |── Audio_files      # The common folder containing any constants decleration
-    |   |      |── ontoloy_files    # The main training and inference scripts
-    |   |      |── transcripts-truth# The data ingestion, orchestration and Azure ML training & inference pipelines      
+    |   |      |── Audio_files      # Audio files with .wav format
+    |   |      |── ontoloy_files    # Frequently used vocabularies in a particular use case
+    |   |      |── transcripts-truth# Ground truth labels for transcriptions and classifications      
     │   |── src                     # Main scripts to perform the experimentation and the required inferences
     |   |      |── common           # The common folder containing any constants decleration
     |   |      |── engine           # The main training and inference scripts
