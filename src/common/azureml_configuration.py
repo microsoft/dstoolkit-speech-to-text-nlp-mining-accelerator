@@ -62,8 +62,6 @@ class AzureMLConfiguration():
             subscription_id, 
             resource_group, 
             location, 
-#            sp_id, 
-#            sp_password
             auth
         ):
         super().__init__() # inherit if applicable
@@ -73,8 +71,6 @@ class AzureMLConfiguration():
         self.subscription_id = subscription_id
         self.resource_group = resource_group
         self.location = location
-#        self.sp_id = sp_id
-#        self.sp_password = sp_password
         self.auth = auth
         
         # workspace and other features will be assigned once configured
@@ -391,7 +387,7 @@ class AzureMLConfiguration():
                 return None, os.listdir(mount_path)
             else:
                 try:
-                    # prepare the mount pint
+                    # prepare the mount point
                     dataset_mounts_context = datasets_registered.mount(mount_point=mount_path)
                 
                     # mount the datasets
