@@ -448,6 +448,48 @@ class AzureMLConfiguration():
         except Exception as error:
             print(f'Error in {error}')
 
+
+    def downloadDatasets(self, datasets_registered, download_path='tmp/datasets/'):
+        """
+        Function to download the registered datasets in Azure ML storage to the local directory
+        """
+        if (self.ws is not None):
+            # If download_path has already been created and downloaded, just keep it. 
+            # If you like, you may change the codes to remove it first beofere downloading new datasets to avoid the old local datasets affecting the new ones.
+            if os.path.isdir(download_path):
+                return None, os.listdir(download_path)
+            else:
+                try:
+                    # Download datasets to local directory
+                    datasets_registered.download(target_path=download_path, overwrite=True)
+                    print(f'Dataset downloaded to: {download_path}')
+
+                    return download_path, os.listdir(download_path)
+
+                except Exception as error:
+                    print(f'Error in: {error}')
+                
+        else:
+            raise Exception('Error in workspace resulted to datastore error.')
+            return None 
+
+
+    def removeLocalDatasets(self, remove_path):
+        """
+        Function to delete the datasets from local file
+        """
+        try:
+            # check to see if the datasets are downloaded
+            if os.path.isdir(remove_path):
+                shutil.rmtree(remove_path)
+                print("The local datasets are removed.")
+            else:
+                print("No dataset files to remove.")
+
+        except Exception as error:
+            print(f'Error in: {error}')
+
+
     def configPipeline(self, docker_path, conda_packages, pip_packages):
         """
         Function to configure the Azure ML pipeline and its parameters
