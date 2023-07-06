@@ -6,7 +6,7 @@ nltk
 gensim
 SoundFile
 auto-sklearn
-scipy==1.7.0
+scipy==1.10.0
 
 ## note to intsall pyldavis perform the following
 ## pip uninstall enum34
